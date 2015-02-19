@@ -23,7 +23,6 @@ var AppModel = Backbone.Model.extend({
       if(this.get('songQueue').length < 2){
         this.get('songQueue').playFirst();
       }
-      this.trigger('updateQueue');
     }, this);
 
     params.library.on('dequeue',function(song){
@@ -35,7 +34,6 @@ var AppModel = Backbone.Model.extend({
         this.get('songQueue').playFirst();
       }
 
-      this.trigger('updateQueue');
     },this)
   }
 
